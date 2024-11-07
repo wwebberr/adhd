@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ADHD Capturer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Website, YouTube Video, and Sidebars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="leftSidebar">
+        <button class="toggle-button" onclick="toggleControls()">Toggle Update</button>
+        <button class="toggle-button" onclick="toggleCalculator()">Toggle Calculator</button>
+        <div class="controls" id="controls">
+            <label for="websiteUrl">Website URL:</label>
+            <input type="text" id="websiteUrl" placeholder="Enter website URL">
+            <label for="videoUrl">YouTube Video URL:</label>
+            <input type="text" id="videoUrl" placeholder="Enter YouTube video URL">
+            <label for="websiteHeight">Website Height (%):</label>
+            <input type="range" id="websiteHeight" min="0" max="100" value="50" oninput="adjustHeights()">
+            <label for="videoHeight">Video Height (%):</label>
+            <input type="range" id="videoHeight" min="0" max="100" value="50" oninput="adjustHeights()">
+            <button onclick="updateContent()">Update</button>
+        </div>
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q" placeholder="Google Search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="calculator" id="calculator">
+            <input type="text" id="calcDisplay" disabled>
+            <div class="calc-buttons">
+                <button onclick="appendToCalcDisplay('7')">7</button>
+                <button onclick="appendToCalcDisplay('8')">8</button>
+                <button onclick="appendToCalcDisplay('9')">9</button>
+                <button onclick="appendToCalcDisplay('/')">/</button>
+                <button onclick="appendToCalcDisplay('4')">4</button>
+                <button onclick="appendToCalcDisplay('5')">5</button>
+                <button onclick="appendToCalcDisplay('6')">6</button>
+                <button onclick="appendToCalcDisplay('*')">*</button>
+                <button onclick="appendToCalcDisplay('1')">1</button>
+                <button onclick="appendToCalcDisplay('2')">2</button>
+                <button onclick="appendToCalcDisplay('3')">3</button>
+                <button onclick="appendToCalcDisplay('-')">-</button>
+                <button onclick="appendToCalcDisplay('0')">0</button>
+                <button onclick="appendToCalcDisplay('.')">.</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="appendToCalcDisplay('+')">+</button>
+                <button onclick="clearCalcDisplay()">C</button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar" id="rightSidebar">
+        <button class="toggle-button" onclick="toggleSpotify()">Toggle Spotify</button>
+        <div class="spotify-container" id="spotifyContainer">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="website-container" id="websiteContainer">
+            <iframe id="websiteFrame" class="website-frame" src="https://example.com"></iframe>
+        </div>
+        <div class="video-container" id="videoContainer">
+            <iframe id="videoFrame" class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
